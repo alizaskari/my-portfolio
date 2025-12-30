@@ -1,42 +1,107 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  cursor: none; 
+}
+
+body {
+  font-family: "Sonar Sans", sans-serif;
+  background: #111;
+  color: #fff;
+  overflow-x: hidden;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.cursor {
+  width: 20px;
+  height: 20px;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  position: fixed;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  transition: all 0.15s ease;
+  z-index: 1000;
+}
+
+/* Landing Section */
+.landing {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 20px;
+}
+
+.landing h1 {
+  font-size: 3rem;
+  line-height: 1.2;
+}
+
+/* Button */
+.btn {
+  padding: 10px 25px;
+  border: 2px solid #fff;
+  transition: 0.3s;
+  display: inline-block;
+  margin-top: 20px;
+}
+
+.btn:hover {
+  background: #fff;
+  color: #111;
+}
+
+/* Projects Section */
+.projects {
+  padding: 100px 50px;
+  background: #1a1a1a;
   text-align: center;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  margin-top: 50px;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.project-card {
+  background: #222;
+  padding: 20px;
+  border-radius: 10px;
+  transition: transform 0.3s, background 0.3s;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.project-card:hover {
+  transform: translateY(-10px);
+  background: #333;
 }
 
-.card {
-  padding: 2em;
+/* Contact Section */
+.contact {
+  padding: 100px 50px;
+  text-align: center;
+  background: #111;
 }
 
-.read-the-docs {
-  color: #888;
+.contact a {
+  color: #1e90ff;
+  transition: color 0.3s;
+}
+
+.contact a:hover {
+  color: #00ffff;
+}
+
+/* Animate individual letters */
+h1 span {
+  display: inline-block;
 }
